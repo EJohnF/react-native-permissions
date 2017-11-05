@@ -47,7 +47,11 @@
 
         if ([type isEqualToString:@"always"]) {
             [self.locationManager requestAlwaysAuthorization];
-        } else {
+        }
+        else if ([type isEqualToString:@"usage"]) {
+            [self.locationManager requestUsageAuthorization];
+        }
+        else {
             [self.locationManager requestWhenInUseAuthorization];
         }
     } else {
